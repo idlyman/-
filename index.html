@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>?????</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div style="flex-direction: column;">
+    <div id="cats" style="display: flex;justify-content: left;align-items: left;"></div>
+
+    <div style="display: flex;justify-content: center;align-items: center;">
+      <button class="light-button" id="light-button" onclick="light_on()">Turn on Light 💡</button>
+    </div>
+  </div>
+
+  <audio id = "song" loop>
+    <source src="audio/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div id="overlay" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 20;"></div>
+
+  <div id="popup" style="
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 221, 226);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    display: none;
+    z-index: 30;
+    text-align: center;">
+    <img src="gifs/cake.gif" alt="Cake" style="width: 300px;"><br><br>
+    <p id="popup-message" style="font-size: 20px; color: black;"></p>
+    <button onclick="closePopup()" style="margin-top: 15px; padding: 8px 16px; border: none; border-radius: 5px; background-color: pink; cursor: pointer;">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
